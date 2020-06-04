@@ -19,13 +19,9 @@ Main Classes Implemented:
   prevent movement when the light isn't green by returning "isOpen()" as false. 
   4. TRAFFIC LIGHT - Each traffic light has a current enum describing its state as green, yellow, or red. It keeps track time in order to 
   know when to switch colors. It controls traffic movement in and near intersection sections. 
-  5. VEHICLE - Depending on a vehicle's status as a car, sport utility vehicle (or possibly even a crossover...), or a panel truck with a four
-  wheel drive and mud tires, it stores between 2-4 pointers to the sections it occupies. The vehicle proceed method will advance the vehicle 
-  if the next section returns "open". 
+  5. VEHICLE - Depending on a vehicle's status as a car, sport utility vehicle (or possibly even a crossover...), or a panel truck with a four-wheel drive and mud tires, it stores between 2-4 pointers to the sections it occupies. The vehicle proceed method will advance the vehicle if the next section returns "open". 
   
   Other Design Decisions:
-  1. We decided to use vectors because of space efficiency. The vector that stores "vehicles" (within lane) functioned as a cyclical array, in 
-  order to avoid memory reallocation which would invalidate pointers to its elements. 
-      a. We had to first initialize a lane before creating its sections for the same reason. 
-  2. We also realized we didn't need Car, SUV, and panel truck as seperate sub-classes of vehicle. Therefore, we decided to have Vehicle handle
-     all those cases, keeping in mind its vehicle type.
+  1. I decided to use vectors because of space efficiency. The vector that stores "vehicles" (within lane) functioned as a cyclical array,   in order to avoid memory reallocation which would invalidate pointers to its elements. 
+      a. I had to first initialize a lane before creating its sections for the same reason. 
+  2. I also realized I didn't need Car, SUV, and panel truck as seperate sub-classes of vehicle. Therefore, I decided to have Vehicle handle all those cases, keeping in mind its vehicle type.
