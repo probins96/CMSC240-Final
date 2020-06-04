@@ -1,5 +1,4 @@
-//Names: Wesley Su, Palmer Robins, Miles Clikeman
-//This file tests, and displays, our implementation of the traffic intersection simulation.
+//This file tests, and displays, the implementation of the traffic intersection simulation.
 
 #include <iostream>
 #include "Animator.h"
